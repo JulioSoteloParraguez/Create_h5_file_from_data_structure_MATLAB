@@ -14,13 +14,15 @@ for n=1:size(FH,4)
 end
 
 data_new = data;
-data_new.MR_FFE_AP = MAG;
-data_new.MR_FFE_RL = MAG;
-data_new.MR_FFE_FH = MAG;
+data_new.MR_FFE_AP = (MAG + abs(min(MAG(:))))*255;;
+data_new.MR_FFE_RL = (MAG + abs(min(MAG(:))))*255;;
+data_new.MR_FFE_FH = (MAG + abs(min(MAG(:))))*255;;
 data_new.MR_PCA_AP = AP;
 data_new.MR_PCA_RL = RL;
 data_new.MR_PCA_FH = FH;
 data_new.voxel_MR = data.voxel_MR/2;
 
+data = data_new;
+    
 mkdir('dataHR/')
 save('dataHR/data.mat','data','-v7.3')
