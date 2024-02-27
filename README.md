@@ -1,0 +1,1 @@
+These codes allow creating the compatible file to be read by 4DFlowNet (https://github.com/EdwardFerdian/4DFlowNet), from the structure file used in the 4D-Flow-Matlab-Toolbox (https://github.com/JulioSoteloParraguez /4D-Flow-Matlab-Toolbox)
